@@ -141,6 +141,7 @@ main {
 
 .correct {
     background-color: green;
+    color: white;
   }
   
 .incorrect {

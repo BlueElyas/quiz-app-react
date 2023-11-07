@@ -8,8 +8,13 @@ export default function Question({ question, answers, handleAnswerSelect, select
     if (isSelected) {
       buttonClass += ' selected'
     }
-    if (checkResult && isSelected) {
-      buttonClass += answer.isCorrect ? ' correct' : ' incorrect'
+
+    if (checkResult) {
+      if (answer.isCorrect) {
+        buttonClass += ' correct'
+      }else if (isSelected) {
+        buttonClass += ' incorrect'
+      }
     }
     return (
       <button
